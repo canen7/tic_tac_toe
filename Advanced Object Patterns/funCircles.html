@@ -1,0 +1,67 @@
+<html>
+<head>
+	<title>Fun Circles</title>
+	<style type="text/css">
+		body {
+			margin: 50px;
+		}
+		canvas{
+			border: 2px solid black;
+			background-color: grey;
+		}
+		circle{
+			color: white;
+		}
+
+	</style>
+	<script type="">
+	var number_of_circles=1;
+	var circles = {};
+
+	function Circle(r,x,y,id){
+		this.r=r;
+		this.x=x;
+		this.y=y;
+		this.id=id;
+
+		this.draw = function (color){
+			var canvas=document.getElementById('canvas')
+			var pen=canvas.getContext('2d');
+			pen.beginPath();
+			pen.arc(this.x,this.y,this.r,0,2*Math.PI,true)
+			pen.strokeStyle=color;
+			pen.stroke();
+		}
+		this.draw('red')
+	}
+
+	
+	</script>
+</head>
+<body>
+	<canvas height='600' width='600' id='canvas'></canvas>
+
+	<script type="text/javascript">
+		var canvas = document.getElementById('canvas');
+
+		canvas.onclick = function() {
+			for (var i=0; i<500, i++) {
+			console.log(event);
+			var circle = new Circle (Math.floor(Math.random()*10),Math.floor(Math.random()*10),Math.floor(Math.random()*10),number_of_circles)
+			circles[number_of_circles]= circle;
+			console.log(circles);
+			number_of_circles ++;
+		}
+
+		// function draw_500_Circles(){
+		// 	var colors = ['blue','navyblue', 'lightblue'];
+		// 	for (var i in circles) {
+		// 		circles[i].draw(colors[Math.floor(Math.random()*3)]);				
+		// 	}
+		// }
+
+		// setInterval(function(){engine()},400);
+	</script>
+
+</body>
+</html>

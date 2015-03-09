@@ -1,0 +1,51 @@
+<html>
+<head>
+	<title>random function</title>
+	<script type="text/javascript">
+	var randomName = function(){
+  				var names = ['George','Mike', 'Joe', 'Ninja'];
+  				var rand_index = Math.floor(Math.random()*5);
+
+  				return names[rand_index];
+
+  				// if (rand>0.75){
+  				// 	return names[0];
+  				// }
+  				// else if (rand>0.50) {
+  				// 	return names[1];
+  				// }
+  				// else if (rand>0.25) {
+  				// 	return names[2];
+  				// }
+  				// else {
+  				// 	return names[3];
+  				// }
+		}
+	var say = function(randomName){
+		  console.log('Say ', x);
+		}
+	var yell = function(randomName){
+		  console.log('Yell ', x);
+		}
+	var eat = function(randomName){
+		  console.log('Eat ', x);
+		}
+	var roll = function(randomName){
+		  console.log ('Roll ', x);
+		}
+	function random_function(a, x, y, z, f ){
+		  functions = [x,y,z,f]
+		  var dice_index=Math.floor(Math.random()*4);
+		  functions[dice_index](a());
+
+		}
+	random_function(randomName, say, yell, eat, roll);
+
+	</script>
+</head>
+<body>
+[]
+
+
+</body>
+</html>
